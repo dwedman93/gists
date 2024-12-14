@@ -1,4 +1,9 @@
 
+# Filebrowser
+sudo docker run     -v /:/srv     -v ~/.filebrowser/filebrowser.db:/database/filebrowser.db     -v ~/.filebrowser/settings.json:/config/settings.json     -e PUID=$(id -u)     -e PGID=$(id -g)     -p 8080:80 --restart unless-stopped -d   filebrowser/filebrowser:s6
+
+
+
 # Duckdns docker 
 
 docker run -d \
