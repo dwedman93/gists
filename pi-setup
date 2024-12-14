@@ -1,0 +1,13 @@
+
+# Duckdns docker 
+
+docker run -d \
+  --name=duckdns \
+  -e PUID=1000 \
+  -e PGID=100 \
+  -e TZ=Europe/Berlin \
+  -e SUBDOMAINS=knilix,troubadix \
+  -e TOKEN=duckdnstocken \
+  -v /var/lib/DuckdnsConfig:/config \
+  --restart unless-stopped \
+  linuxserver/duckdns
